@@ -15,12 +15,7 @@ body {
 
 div#site-interface-container {
     background: #c5c5b2;
-    max-width: 900px;
-    margin: auto;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-    margin-top: -15px;
     padding: 20px;
-    border-radius: 0px 0px 30px 0px;
     text-align: center;
 }
 
@@ -135,19 +130,16 @@ footer .favicon-footer img:hover {
 }
 
 /*------------------------------------------------------------*/
-/* Media Queries para telas menores */
+/* Media Queries para diferentes tamanhos de tela */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     div#site-interface-container {
-        width: 100%;
-        border-radius: 0;
+        max-width: 900px;
+        margin: auto;
+        border-radius: 0px 0px 30px 0px;
     }
 
     nav#menu ul {
-        flex-direction: column; /* Empilha os itens do menu verticalmente */
-    }
-
-    nav#menu ul li {
-        margin: 10px 0; /* Espaçamento entre os itens do menu */
+        flex-direction: row; /* Volta ao layout horizontal para telas maiores */
     }
 }
