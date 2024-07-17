@@ -6,34 +6,41 @@
 body {
     background: #d2d2c1 url('./_img/fundo.png');
     font: 16px Arial, Helvetica, sans-serif;
-    margin: 0; /* Removendo margens padrão */
-    padding: 0; /* Removendo preenchimento padrão */
+    margin: 0;
+    padding: 0;
 }
 
-/*------------------------------------------------------------*/
 /* Container principal */
 
 div#site-interface-container {
     background: #c5c5b2;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
+    border-radius: 0px 0px 30px 0px;
 }
 
-/*------------------------------------------------------------*/
+/* Cabeçalho */
+
+#header img {
+    width: 100%;
+    height: auto;
+}
+
 /* Textos */
 
 p {
     text-indent: 20px;
     text-align: justify;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.189);
-    margin: 10px 0; /* Espaçamento entre parágrafos */
+    margin: 10px 0;
 }
 
 h1 {
     text-align: left;
 }
 
-/*------------------------------------------------------------*/
 /* Menu de navegação */
 
 nav#menu {
@@ -45,12 +52,12 @@ nav#menu {
 nav#menu ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Centraliza os itens do menu */
+    justify-content: center;
     padding: 0;
 }
 
 nav#menu ul li {
-    margin: 0 10px; /* Espaçamento entre os itens do menu */
+    margin: 0 10px;
 }
 
 nav#menu ul li a {
@@ -59,8 +66,8 @@ nav#menu ul li a {
     border: solid 1px #000000;
     opacity: 0.75;
     border-radius: 20px;
-    padding: 10px 20px; /* Aumenta a área clicável */
-    display: inline-block; /* Garante que os links ocupem apenas o necessário */
+    padding: 10px 20px;
+    display: inline-block;
 }
 
 nav#menu ul li a:hover {
@@ -69,7 +76,6 @@ nav#menu ul li a:hover {
     background-color: #979779;
 }
 
-/*------------------------------------------------------------*/
 /* Imagens e figcaption */
 
 figure.legend-picture {
@@ -80,7 +86,7 @@ figure.legend-picture {
 }
 
 figure.legend-picture img {
-    max-width: 100%; /* Imagem responsiva */
+    width: 100%;
     height: auto;
     object-fit: cover;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
@@ -105,7 +111,6 @@ figure.legend-picture:hover figcaption {
     opacity: 1;
 }
 
-/*------------------------------------------------------------*/
 /* Rodapé */
 
 footer#footer {
@@ -121,7 +126,7 @@ footer .favicon-footer {
 footer .favicon-footer img {
     width: 30px;
     height: 30px;
-    transition: width 0.5s, height 0.5s; /* Transição suave */
+    transition: width 0.5s, height 0.5s;
 }
 
 footer .favicon-footer img:hover {
@@ -129,17 +134,30 @@ footer .favicon-footer img:hover {
     height: 50px;
 }
 
-/*------------------------------------------------------------*/
 /* Media Queries para diferentes tamanhos de tela */
 
 @media screen and (min-width: 768px) {
     div#site-interface-container {
         max-width: 900px;
         margin: auto;
-        border-radius: 0px 0px 30px 0px;
     }
 
     nav#menu ul {
-        flex-direction: row; /* Volta ao layout horizontal para telas maiores */
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    nav#menu ul {
+        flex-direction: column;
+    }
+
+    nav#menu ul li {
+        margin: 10px 0;
+    }
+
+    figure.legend-picture img {
+        width: 100%;
+        height: auto;
     }
 }
