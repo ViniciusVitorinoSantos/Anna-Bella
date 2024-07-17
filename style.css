@@ -9,6 +9,7 @@ body {
 
 /*------------------------------------------------------------*/
 /*section*/
+@media screen and (max-width: 768px) {
 div#site-interface-container {
     background: #c5c5b2;
     width: 900px;
@@ -53,6 +54,7 @@ nav#menu ul li {
     margin:5px;
     margin: 2px;
 }
+}
 
 nav#menu ul li a {
     color: #333;
@@ -61,6 +63,7 @@ nav#menu ul li a {
     opacity: 0.75;
     border-radius: 20px;
     padding: 5px;
+    display: inline-block; /* Garante que os links ocupem apenas o necessário */
 }
 
 nav#menu ul li a:hover {
@@ -77,8 +80,8 @@ figure.legend-picture{
 }
 
 figure.legend-picture img {
-    width: 800px;
-    height: 400px;
+    max-width: 100%; /* Imagem responsiva */
+    height: auto;
     object-fit: cover;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
 }
